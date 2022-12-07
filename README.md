@@ -20,6 +20,8 @@ Note. Our pipeline processes secondary objects using both watershed and propagat
 
 The VAMPIRE package is available as a python module at https://github.com/kukionfr/VAMPIRE_open, or as an .exe file at https://github.com/kukionfr/VAMPIRE_open/releases/download/executable/vampire.exe.
 
+AS OF December 2022, you must use the .exe and run it as administrator. The standard python package cannot run the functions necessary to save and record boundary items and the code will run into numerous errors. 
+
 Common early mistakes is many ransomware anti-virus softwares such as Avast will prevent the .exe files from creating the requisite changes in your hard-drive such as creating the .pickle and .csv files necessary to represent the package outcomes. It is recommended to either disable your ransomware protections or exempt your python IDE or the vampire.exe file in order for the program to run smoothly. 
 
 The VAMPIRE software is relatively easy to use. You direct the software by uploading a .csv file with the condition, path, and tags of the images you are interested in. i.e. condition: GBM6 Cells, path: typically a C:/ string pointed at the folder with the SEGMENTED images of your cells, and lastly tag: i.e. CYT_propagation_segmented. It is this last part that allows us to apply our double algorithm technique above, by changing it to either CYT_propagation_segmented or CYT_watershed_segmented, we are thus able to selectively choose the best secondary object identification algorithm for downstream analysis with minimal hassle. 
